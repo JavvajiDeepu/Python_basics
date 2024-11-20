@@ -1,4 +1,3 @@
-
 cars = [
     
     {"make": "Ford", "model": "Fiesta", "Mileage": 230000, "fuel_consumed": 450},
@@ -6,12 +5,20 @@ cars = [
     {"make": "Ford", "model": "Focus", "Mileage": 290000, "fuel_consumed": 650},
     {"make": "Mini", "model": "cooper", "Mileage": 150000, "fuel_consumed": 850},
 ]
+
 def calculate_mpg(car):
-    # here round is used for converting float values to decimals (how many decimals you need ex 2.92)
-    # syntax for rounded_number = round(number, 2 or 3)
     mpg = round(car["Mileage"] / car["fuel_consumed"], 2)
-    name = f"{car['make']} {car['model']}"
-    print(f"{name} does {mpg} miles per gallon.")
+    return mpg
+
+def car_model(car):
+    car_make= car["make"]
+    car_model= car["model"]
+    car_name= f"{car_make} {car_model}"
+    return car_name
+
 for car in cars:
 #here car is  a argument
-    calculate_mpg(car)
+     car_mpg= calculate_mpg(car)
+     car_kpg= round(1.60 * car_mpg, 2)
+     car_name= car_model(car)
+     print(f"{car_name} does {car_mpg} miles per gallon or {car_kpg} km per gallon")
