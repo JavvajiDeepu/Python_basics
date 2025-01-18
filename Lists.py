@@ -21,3 +21,5 @@ print(len(name))
 name = ["sai", "ram"]
 name.insert(3,"om")
 print(name)
+
+
