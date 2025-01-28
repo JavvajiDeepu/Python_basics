@@ -38,4 +38,6 @@ print(add(4 , ))
 
 # lambda function
 divide = lambda x, y: x / y
+# print(lambda x, y: x / y),(23,56)
 print(divide(23,56))
+
