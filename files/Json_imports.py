@@ -16,5 +16,6 @@ file.close()
 
 my_json_string = '[{"name": "Alfa Romeo", "released": 1950}]'
 
-incorrect_car = json.loads(my_json_string) #dump 
+incorrect_car = json.loads(my_json_string) 
+#dump function that writes the dictionary directly to a file in the form of JSON without having to convert it to an actual JSON object
 print(incorrect_car[0]['name'])
